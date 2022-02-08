@@ -14,8 +14,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
 ## Bronnenlijst
-  1. -bron 1-
-  2. -bron 2-
+  1. https://en.wikipedia.org/wiki/File:Overwatch_circle_logo.svg
+  2. https://en.wikipedia.org/wiki/Battle.net
   3. -...-
 
 
