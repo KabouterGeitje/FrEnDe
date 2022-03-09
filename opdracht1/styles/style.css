@@ -55,13 +55,13 @@ body {
 /* Toegankelijkheid optimaliseren met het uitzetten
 van de animatie en een dark en light modus. */
 
-@media(prefers-reduced-motion:reduce){
+@media(prefers-reduced-motion: reduce){
   body{
     animation-play-state: paused;
   }
 }
 
-@media(prefers-color-scheme:light){
+@media(prefers-color-scheme: light){
   :root{
 	--color-background:white;
     --font-kleur:#15171E;
