@@ -62,8 +62,8 @@ van de animatie en een dark en light modus. */
 }
 
 @media(prefered-color-scheme:light){
-  root{
-	  --color-background:white;
+  :root{
+	--color-background:white;
     --font-kleur:#15171E;
     --element-kleur: #4481C3;
   }
