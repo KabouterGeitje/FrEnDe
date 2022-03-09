@@ -108,7 +108,6 @@ mijn voorkeur heb voor de animatie die gebruik maakt van de box-shadow.
   width: 4vw; height: 8vw; 
   border-radius: 48% 52% 48% 52% / 48% 48% 52% 52%;
   animation: 0.7s linear 0s infinite running draaien;
-  animation-timing-function: ease-in-out;
 }
 .deel.een{
   transform: rotate(-25deg);
