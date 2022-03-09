@@ -181,7 +181,7 @@ de vorm te erg, omdat de values van de box-shadow dan te groot worden.
 
 
 
-de animatie wanneer ik gebruik zou maken van een radial gradient in plaats van een box shadow.
+/* de animatie wanneer ik gebruik zou maken van een radial gradient in plaats van een box shadow. */
 
 @keyframes draaien  {
   0%{
