@@ -16,7 +16,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ## Bronnenlijst
   1. https://en.wikipedia.org/wiki/File:Overwatch_circle_logo.svg
   2. https://en.wikipedia.org/wiki/Battle.net
-  3. -...-
+  3. https://fonts.adobe.com/fonts/halogen
 
 
 
@@ -32,10 +32,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Ik wil een beter begrip hebben voor hoe animaties werken, zodat ik zelf hele coole dingen kan bedenken die ik kan gebruiken
+  in mijn toekomstige designs.
+  - Ik wil meer leren over hoe ik een website compleet responsive kan maken.
  
 </details>
 
