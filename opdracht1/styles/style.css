@@ -102,7 +102,7 @@ maar ik wilde het helemaal doen met CSS.
 Ik heb in de code hieronder een radial
 gradient gebruikt, maar die animatie loopt helaas niet echt vloeiend, waardoor ik toch
 mijn voorkeur heb voor de animatie die gebruik maakt van de box-shadow.
-
+*/
 .deel.een, .deel.twee, .deel.drie{
   background-image: radial-gradient(100% 90% at 70% 60%, var(--transparent-background) 50%, var(--element-kleur) 50%);
   width: 4vw; height: 8vw; 
@@ -123,14 +123,13 @@ mijn voorkeur heb voor de animatie die gebruik maakt van de box-shadow.
 .deel.drie{
   transform: rotate(225deg);
 }
-
+/*
 In de code hieronder heb ik dus gebruik gemaakt van een box shadow en een border-radius om aan 
 de vormen van mijn animatie te komen.
 
 De animatie is wel responsive, maar als het scherm te klein wordt, dan veranderd 
 de vorm te erg, omdat de values van de box-shadow dan te groot worden.
 
-*/
 
 .deel.een, .deel.twee, .deel.drie{
   background-color:var(--transparent-background);
@@ -152,7 +151,7 @@ de vorm te erg, omdat de values van de box-shadow dan te groot worden.
 .deel.drie{
   transform: rotate(225deg);
 }
-
+*/
 .battlenet {
     margin: 0;
     position: absolute;
@@ -180,7 +179,7 @@ de vorm te erg, omdat de values van de box-shadow dan te groot worden.
     margin-top: 0.5em;
 }
 
-/*
+
 
 de animatie wanneer ik gebruik zou maken van een radial gradient in plaats van een box shadow.
 
@@ -202,9 +201,9 @@ de animatie wanneer ik gebruik zou maken van een radial gradient in plaats van e
   }
 }
 
-*/
 
-/* Animatie van de woosh. */
+
+/* Animatie van de woosh. 
 @keyframes draaien  {
   0%{
     box-shadow: -40px -30px 0 20px var(--element-kleur);
@@ -222,6 +221,7 @@ de animatie wanneer ik gebruik zou maken van een radial gradient in plaats van e
     box-shadow: -40px -30px 0 20px var(--element-kleur);
   }
 }
+*/
 
 /*
 Ik had eerst een hele lastige vorm gebruikt die niet zo mooi verliep wanneer je hem annimeerde. 
