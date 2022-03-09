@@ -220,9 +220,7 @@ de vorm te erg, omdat de values van de box-shadow dan te groot worden.
     box-shadow: -40px -30px 0 20px var(--element-kleur);
   }
 }
-*/
 
-/*
 Ik had eerst een hele lastige vorm gebruikt die niet zo mooi verliep wanneer je hem annimeerde. 
 toen dacht ik, je kan ook gewoon een ovaal maken en dat zag er gelijk een stuk mooier uit. Ook had ik
 nog heel veel code dubbel.
