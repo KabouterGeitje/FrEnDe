@@ -27,7 +27,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je storyboard:
-
+<img src="readme-images/a_storyboard_lego.jpg" width="375px" alt="storyboard">
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
