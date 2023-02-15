@@ -34,6 +34,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - Ik wil een beter begrip hebben voor hoe animaties werken, zodat ik zelf hele coole dingen kan bedenken die ik kan gebruiken
   in mijn toekomstige designs.
   - Ik wil meer leren over hoe ik een website compleet responsive kan maken.
+  
+  ### Feedback van Ufuk
+  - Het concept past goed bij de logo stijl. Lego die met bouwblokken zichzelf bouwt valt prima in de style.
+  - De blokjes zijn alle 3 een ander textuur, en dat brengt goed detail in de animatie.
+  - De animatie formaat is vierkant en valt dus goed te scalen op verschillende formaten.
+  - Voor de dark mode, speel met de kleuren, dus wat hiervoor wit was, zwart maken.
+  - Kijk hoe je de lego in html css kan maken. En misschien kun je kijken hoe je elke letter een lego blokje maakt.
  
 </details>
 
