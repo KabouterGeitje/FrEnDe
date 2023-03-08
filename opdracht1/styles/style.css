@@ -1,0 +1,299 @@
+/* CSS Document */
+
+/*********/
+/* FONTS */
+/*********/
+@font-face {
+	font-family: 'eenfont';
+	src: url('../fonts/eenfont.woff2') format('woff2'),
+		url('../fonts/eenfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'lego';
+	src: url('../fonts/legothick.ttf') format('truetype');
+}
+
+
+
+
+
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+button:not[disabled],
+summary {
+	cursor: pointer;
+}
+
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* startje */
+	--color-text: #111;
+	--color-background: #ffffff;
+	
+}
+
+
+
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
+body {
+	font-family: 'lego', sans-serif;
+	color: var(--color-text);
+	background-color: var(--color-background);
+	height: 100dvh;
+	display: grid;
+	place-content: center;
+	overflow:hidden; /* zodat mijn body niet scrollable wordt na het toevoegen van een element op de body met after */
+}
+
+/* jouw code */
+h1 {
+	font-family: 'lego', sans-serif;
+	font-size: 4em;
+	letter-spacing: -0.2em;
+	text-transform: uppercase;
+	animation-name: logoDraait;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+	animation-delay: 2s;
+}
+
+span {
+	position: relative;
+	color: var(--color-background);
+
+}
+
+/* Transitie naar volledig blok */
+
+body::before {
+	content: "";
+	position: absolute;
+	top:0;
+	right:0;
+	width:100vw;
+	height:100vh;
+	background-color: white;
+	z-index: 9;
+	animation: transitie 4s linear;
+	animation-fill-mode: forwards;
+}
+
+/* Rood blokje */
+
+span:nth-of-type(1)::before {
+	content: "";
+	position: absolute;
+	width: 5em;
+	height: 2em;
+	z-index: -10;
+	animation-name: roodBlokje;
+	animation-duration: 4s;
+	animation-fill-mode: forwards;
+}
+
+/* Blauw blokje */
+
+span:nth-of-type(2)::after {
+	content: "";
+	position: absolute;
+	width: 3.79em;
+	height: 2em;
+	z-index: -11;
+	animation-name: blauwBlokje;
+	animation-duration: 4s;
+	animation-fill-mode: forwards;
+}
+
+/* geel blokje */
+
+span:nth-of-type(3)::after {
+	content: "";
+	position: absolute;
+	width: 1.23em;
+	height: 2em;
+	z-index: -11;
+	animation-name: geelBlokje;
+	animation-duration: 4s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes roodBlokje {
+	0% {
+		transform: translate(-4em, -6em) rotate(0deg);
+		background-image:
+			linear-gradient(to bottom,
+				transparent .25em,
+				red .25em),
+			repeating-linear-gradient(to right,
+				transparent 0 .34em,
+				maroon .34em,
+				red,
+				maroon .89em,
+				transparent .89em 1.23em);
+	}
+
+	50% {
+		transform: translate(-1.25em, -1.57em) rotate(360deg);
+		background-image:
+			linear-gradient(to bottom,
+				transparent .25em,
+				red .25em),
+			repeating-linear-gradient(to right,
+				transparent 0 .34em,
+				maroon .34em,
+				red,
+				maroon .89em,
+				transparent .89em 1.23em);
+	}
+
+	100% {
+		transform: translate(-1.25em, -1.57em) rotate(360deg);
+		background-image:
+			linear-gradient(to bottom,
+				transparent .25em,
+				orange .25em),
+			repeating-linear-gradient(to right,
+				transparent 0 .34em,
+				rgb(137, 117, 86) .34em,
+				orange,
+				rgb(137, 117, 86) .89em,
+				transparent .89em 1.23em);
+	}
+}
+
+@keyframes geelBlokje {
+	0% {
+		transform: translate(-2em, 3em);
+		background-image:
+			linear-gradient(to bottom,
+				transparent .25em,
+				yellow .25em),
+			repeating-linear-gradient(to right,
+				transparent 0 .34em,
+				#B0B06C .34em,
+				yellow,
+				#B0B06C .89em,
+				transparent .89em 1.23em);
+	}
+
+	50% {
+		transform: translate(-2.74em, 0.16em);
+		background-image:
+			linear-gradient(to bottom,
+				transparent .25em,
+				yellow .25em),
+			repeating-linear-gradient(to right,
+				transparent 0 .34em,
+				#B0B06C .34em,
+				yellow,
+				#B0B06C .89em,
+				transparent .89em 1.23em);
+	}
+
+	100% {
+		transform: translate(-2.746em, 0.17em);
+		background-image:
+			linear-gradient(to bottom,
+				transparent .25em,
+				orange .25em),
+			repeating-linear-gradient(to right,
+				transparent 0 .34em,
+				rgb(137, 117, 86) .34em,
+				orange,
+				rgb(137, 117, 86) .89em,
+				transparent .89em 1.23em);
+	}
+}
+
+@keyframes blauwBlokje {
+	0% {
+		transform: translate(1em, 2em);
+		background-image:
+			linear-gradient(to bottom,
+				transparent .25em,
+				blue .25em),
+			repeating-linear-gradient(to right,
+				transparent 0 .34em,
+				#5C5E8E 0.34em,
+				blue,
+				#5C5E8E .89em,
+				transparent .89em 1.23em);
+	}
+
+	50% {
+		transform: translate(-0.90em, 0.16em);
+		background-image:
+			linear-gradient(to bottom,
+				transparent .25em,
+				blue .25em),
+			repeating-linear-gradient(to right,
+				transparent 0 .34em,
+				#5C5E8E 0.34em,
+				blue,
+				#5C5E8E .89em,
+				transparent .89em 1.23em);
+	}
+
+	100% {
+		transform: translate(-0.90em, 0.17em);
+		background-image:
+			linear-gradient(to bottom,
+				transparent .25em,
+				orange .25em),
+			repeating-linear-gradient(to right,
+				transparent 0 .34em,
+				rgb(137, 117, 86) .34em,
+				orange,
+				rgb(137, 117, 86) .89em,
+				transparent .89em 1.23em);
+	}
+}
+
+@keyframes logoDraait {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes transitie {
+	0% {
+		opacity: 0;	
+	}
+
+	60% {
+		opacity: 0;	
+	}
+
+	65% {
+		opacity: 1;	
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
