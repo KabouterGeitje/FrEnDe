@@ -1,0 +1,181 @@
+/* CSS Document */
+
+/*********/
+/* FONTS */
+/*********/
+@font-face {
+	font-family: 'eenfont';
+	src: url('../fonts/eenfont.woff2') format('woff2'),
+			 url('../fonts/eenfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'graffiti';
+	src: url('../fonts/DOCALLISME\ ON\ STREET.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'urban';
+	src: url('../fonts/Urban\ Heroes.ttf') format('truetype');
+}
+
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+button:not[disabled], summary {
+	cursor: pointer;
+}
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* startje */
+	--color-text:#e6d0fa;
+	--color-background:#543355;
+}
+
+@media (prefers-color-scheme: light) {
+
+	:root {
+		--color-text:#111;
+		--color-background:#e6d0fa;
+		--colorButton1:rgb(247, 98, 35);
+		--accentColor1:rgb(207, 100, 0);
+		--colorButton2:rgb(255, 219, 158);
+		--colorButton3:rgb(157, 213, 242);
+		--accentColor2:rgb(0, 58, 92);
+		--colorButton4:rgb(19, 72, 112);
+		--colorButtonKlaar:rgb(255, 126, 74);
+		--colorButtonKlaarText:rgb(75, 21, 0);
+	}
+
+}
+
+/****************/
+/* JOUW STYLING */
+/****************/
+
+body {
+  font-family: urban;
+  color:var(--color-text);
+  background-color:var(--color-background);
+  display: grid;
+  justify-content:center;
+  position:relative;
+  margin: 0;
+}
+
+section{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+/* titel */
+
+h1{
+	font-family: graffiti;
+	text-align: center;
+	margin-top: 20%;
+	font-size: clamp(4rem, 5vw, 10rem); /*responsiveness*/
+}
+
+/*Schoen afbeelding*/
+
+section:nth-of-type(1){
+	height:clamp(10em, 15vw, 35rem);
+	display: flex;
+	align-items: center;
+}
+
+svg{
+	position:absolute;
+	width: clamp(18rem, 25vw, 40rem); /*responsiveness*/
+	margin:auto;
+	left: 0;
+	right: 0;
+	text-align: center;
+	z-index:1;
+}
+
+img:first-of-type{
+	z-index:2;
+}
+
+/*Slider menu schoendeel*/
+
+section:nth-of-type(2){
+	align-items: center;
+}
+
+/*Buttons kleur kiezen*/
+
+section:nth-of-type(3) button:nth-of-type(1){
+	background-color: var(--colorButton1);
+	border-color: var(--colorButtonKlaarText);
+}
+
+section:nth-of-type(3) button:nth-of-type(2){
+	background-color: var(--colorButton2);
+	border-color: var(--accentColor1);
+}
+
+section:nth-of-type(3) button:nth-of-type(3){
+	background-color: var(--colorButton3);
+	border-color: var(--accentColor2);
+}
+
+section:nth-of-type(3) button:nth-of-type(4){
+	background-color: var(--colorButton4);
+}
+
+section:nth-of-type(3){
+	margin-top: 5%;
+	width: clamp(20rem, 20vw, 40rem);
+}
+
+section:nth-of-type(3) > button {
+	border-radius: 100%;
+	width: clamp(5em, 3vw, 8em);
+	height: clamp(5em, 3vw, 8em);
+}
+
+/*Button 'klaar'*/
+
+body > button{
+	background-color:var(--colorButtonKlaar);
+	border-color: var(--colorButtonKlaarText);
+	border-radius:5px;
+	font-family: urban;
+	color:var(--colorButtonKlaarText);
+	margin-top: 15%;
+	margin-left:auto;
+	margin-right: auto;
+	width:clamp(5em, 5vw, 8em);
+	height:clamp(3em, 2vw, 5em);
+}
+
+/* alle buttons en svg een cursor pointer geven*/
+
+button, g{
+	cursor:pointer;
+}
+
+/* hover over buttons*/
+
+button:hover {
+	transform: translatey(0.2em);
+}
+
+/*alles kleurloos wanneer de pagina leeg is*/
+#veters2, #schoen2, #enkel2, #zool2{
+	stroke: rgb(255, 255, 255);
+}

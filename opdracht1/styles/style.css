@@ -1,0 +1,320 @@
+/* CSS Document */
+
+/*********/
+/* FONTS */
+/*********/
+@font-face {
+	font-family: 'eenfont';
+	src: url('../fonts/eenfont.woff2') format('woff2'),
+		url('../fonts/eenfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'lego';
+	src: url('../fonts/legothick.ttf') format('truetype');
+}
+
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+button:not[disabled],
+summary {
+	cursor: pointer;
+}
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* dark mode als default, light mode wanneer er preference wordt gegeven aan light mode */
+	--color-text: #ffffff;
+	--color-background: #111;
+
+	--kleurBlokje1: rgb(136, 0, 0);
+	--kleurAccent1: rgb(59, 0, 0); 
+	--kleurBlokje2:rgb(84, 148, 0); 
+	--kleurAccent2:#276900; 
+	--kleurBlokje3:rgb(79, 0, 116); 
+	--kleurAccent3:#000230;
+
+	--font-size: clamp(4rem, 5vw, 10rem); /* met alleen deze regel wordt het hele logo responsive*/
+	--blokjeHoogte: 2em;  
+}
+
+/*********************/
+/* Styling light-mode */
+/*********************/
+
+@media (prefers-color-scheme: light) {
+
+	:root {
+		--color-text: #111;
+		--color-background: #ffffff;
+		--kleurBlokje1: red;
+		--kleurAccent1: maroon; 
+		--kleurBlokje2:yellow; 
+		--kleurAccent2:#B0B06C; 
+		--kleurBlokje3:blue; 
+		--kleurAccent3:#5C5E8E;
+	}
+
+}
+
+/****************/
+/* JOUW STYLING */
+/****************/
+
+
+body {
+	font-family: 'lego', sans-serif;
+	color: var(--color-text);
+	background-color: var(--color-background);
+	height: 100dvh;
+	display: grid;
+	place-content: center;
+	overflow:hidden; /* zodat mijn body niet scrollable wordt na het toevoegen van een element op de body met after */
+}
+
+/* jouw code */
+h1 {
+	font-family: 'lego', sans-serif;
+	font-size: var(--font-size);
+	letter-spacing: -0.2em;
+	text-transform: uppercase;
+	animation-name: logoDraait;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+	animation-delay: 2s;
+}
+
+span {
+	position: relative;
+	color: var(--color-background);
+
+}
+
+/* Transitie naar volledig blok */
+
+body::before {
+	content: "";
+	position: absolute;
+	top:0;
+	right:0;
+	width:100vw;
+	height:100vh;
+	background-color: var(--color-background);
+	z-index: 9;
+	animation: transitie 4s linear;
+	animation-fill-mode: forwards;
+}
+
+/* Rood blokje */
+
+span:nth-of-type(1)::before {
+	content: "";
+	position: absolute;
+	width: 5em;
+	height: var(--blokjeHoogte);
+	z-index: -10;
+	animation-name: roodBlokje;
+	animation-duration: 4s;
+	animation-fill-mode: forwards;
+}
+
+/* Blauw blokje */
+
+span:nth-of-type(2)::after {
+	content: "";
+	position: absolute;
+	width: 3.79em;
+	height: var(--blokjeHoogte);
+	z-index: -11;
+	animation-name: blauwBlokje;
+	animation-duration: 4s;
+	animation-fill-mode: forwards;
+}
+
+/* geel blokje */
+
+span:nth-of-type(3)::after {
+	content: "";
+	position: absolute;
+	width: 1.23em;
+	height: var(--blokjeHoogte);
+	z-index: -11;
+	animation-name: geelBlokje;
+	animation-duration: 4s;
+	animation-fill-mode: forwards;
+}
+
+/*ik geef de maten van de blokjes en de kleuren van de blokjes overal opnieuw aan, omdat anders de animatie niet doet wat hij moet doen.*/
+
+@keyframes roodBlokje {
+	0% {
+		transform: translate(-4em, -6em) rotate(0deg);
+		background-image:
+			linear-gradient(to bottom,
+				transparent .25em,
+				var(--kleurBlokje1) .25em),
+			repeating-linear-gradient(to right,
+				transparent 0 .34em,
+				var(--kleurAccent1) .34em,
+				var(--kleurBlokje1),
+				var(--kleurAccent1) .89em,
+				transparent .89em 1.23em);
+	}
+
+	50% {
+		transform: translate(-1.25em, -1.57em) rotate(360deg);
+		background-image:
+			linear-gradient(to bottom,
+				transparent .25em,
+				var(--kleurBlokje1) .25em),
+			repeating-linear-gradient(to right,
+				transparent 0 .34em,
+				var(--kleurAccent1).34em,
+				var(--kleurBlokje1),
+				var(--kleurAccent1) .89em,
+				transparent .89em 1.23em);
+	}
+
+	100% {
+		transform: translate(-1.25em, -1.57em) rotate(360deg);
+		background-image:
+			linear-gradient(to bottom,
+				transparent .25em,
+				var(--kleurBlokje1) .25em),
+			repeating-linear-gradient(to right,
+				transparent 0 .34em,
+				var(--kleurAccent1).34em,
+				var(--kleurBlokje1),
+				var(--kleurAccent1) .89em,
+				transparent .89em 1.23em);
+	}
+}
+
+@keyframes geelBlokje {
+	0% {
+		transform: translate(-2em, 3em);
+		background-image:
+			linear-gradient(to bottom,
+				transparent .25em,
+				var(--kleurBlokje2) .25em),
+			repeating-linear-gradient(to right,
+				transparent 0 .34em,
+				var(--kleurAccent2) .34em,
+				var(--kleurBlokje2),
+				var(--kleurAccent2) .89em,
+				transparent .89em 1.23em);
+	}
+
+	50% {
+		transform: translate(-2.74em, 0.16em);
+		background-image:
+			linear-gradient(to bottom,
+				transparent .25em,
+				var(--kleurBlokje2) .25em),
+			repeating-linear-gradient(to right,
+				transparent 0 .34em,
+				var(--kleurAccent2) .34em,
+				var(--kleurBlokje2),
+				var(--kleurAccent2) .89em,
+				transparent .89em 1.23em);
+	}
+
+	100% {
+		transform: translate(-2.746em, 0.17em);
+		background-image:
+			linear-gradient(to bottom,
+				transparent .25em,
+				var(--kleurBlokje1) .25em),
+			repeating-linear-gradient(to right,
+				transparent 0 .34em,
+				var(--kleurAccent1).34em,
+				var(--kleurBlokje1),
+				var(--kleurAccent1) .89em,
+				transparent .89em 1.23em);
+	}
+}
+
+@keyframes blauwBlokje {
+	0% {
+		transform: translate(1em, 2em);
+		background-image:
+			linear-gradient(to bottom,
+				transparent .25em,
+				var(--kleurBlokje3) .25em),
+			repeating-linear-gradient(to right,
+				transparent 0 .34em,
+				var(--kleurAccent3) 0.34em,
+				var(--kleurBlokje3),
+				var(--kleurAccent3) .89em,
+				transparent .89em 1.23em);
+	}
+
+	50% {
+		transform: translate(-0.90em, 0.16em);
+		background-image:
+			linear-gradient(to bottom,
+				transparent .25em,
+				var(--kleurBlokje3) .25em),
+			repeating-linear-gradient(to right,
+				transparent 0 .34em,
+				var(--kleurAccent3) 0.34em,
+				var(--kleurBlokje3),
+				var(--kleurAccent3) .89em,
+				transparent .89em 1.23em);
+	}
+
+	100% {
+		transform: translate(-0.90em, 0.17em);
+		background-image:
+		linear-gradient(to bottom,
+			transparent .25em,
+			var(--kleurBlokje1) .25em),
+		repeating-linear-gradient(to right,
+			transparent 0 .34em,
+			var(--kleurAccent1).34em,
+			var(--kleurBlokje1),
+			var(--kleurAccent1) .89em,
+			transparent .89em 1.23em);  
+	}
+}
+
+@keyframes logoDraait {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes transitie {
+	0% {
+		opacity: 0;	
+	}
+
+	60% {
+		opacity: 0;	
+	}
+
+	65% {
+		opacity: 1;	
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
