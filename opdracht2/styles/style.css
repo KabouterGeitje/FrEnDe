@@ -40,14 +40,7 @@ button:not[disabled], summary {
 	/* startje */
 	--color-text:#e6d0fa;
 	--color-background:#543355;
-}
-
-@media (prefers-color-scheme: light) {
-
-	:root {
-		--color-text:#111;
-		--color-background:#e6d0fa;
-		--colorButton1:rgb(247, 98, 35);
+			--colorButton1:rgb(247, 98, 35);
 		--accentColor1:rgb(207, 100, 0);
 		--colorButton2:rgb(255, 219, 158);
 		--colorButton3:rgb(157, 213, 242);
@@ -55,6 +48,13 @@ button:not[disabled], summary {
 		--colorButton4:rgb(19, 72, 112);
 		--colorButtonKlaar:rgb(255, 126, 74);
 		--colorButtonKlaarText:rgb(75, 21, 0);
+}
+
+@media (prefers-color-scheme: light) {
+
+	:root {
+		--color-text:#111;
+		--color-background:#e6d0fa;
 	}
 
 }
